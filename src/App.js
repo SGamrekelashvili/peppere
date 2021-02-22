@@ -6,7 +6,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch('/time/2').then(res => res.text()).then(data => {
+    fetch('http://46.101.137.243/time/2').then(res => res.text()).then(data => {
       console.log(data)
       const b = data.time.split("[")
       const c = b[1].split("]")
@@ -15,6 +15,17 @@ function App() {
     }).catch((err) => {
       console.log(err)
     })
+    axios.all([
+      axios.get(`/time/2`)
+      .then(res => {
+        const persons = res.data;
+        console.log("AXIO " + persons)
+        const b = persons.time.split("[")
+        const c = b[1].split("]")
+        const htmlt=c[0]
+        sethtml(htmlt)
+      })
+    ])
   }, []);
 
   return (
