@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from "react"
-import ReactDOM from 'react-dom';
 
 function App() {
   const [html, sethtml] = useState()
@@ -15,7 +14,10 @@ function App() {
   }, []);
 
   return (
+    <>
     <div dangerouslySetInnerHTML={{__html: html}} />
+    asdasdasdasdasdasdas
+  </>
   );
 }
 
