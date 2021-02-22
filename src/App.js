@@ -18,7 +18,6 @@ function App() {
   return (
     <>
     <div dangerouslySetInnerHTML={{__html: html}} />
-    asdasdasdasdasdasdas
   </>
   );
 }
