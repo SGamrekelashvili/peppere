@@ -11,9 +11,7 @@ function App() {
       const c = b[1].split("]")
       const htmlt=c[0]
       sethtml(htmlt)
-    }).error(
-      console.log("ERROR")
-    );
+    })
   }, []);
 
   return (
