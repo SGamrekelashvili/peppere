@@ -1,19 +1,37 @@
-import React,{useState} from "React";
+import React,{Component} from "react"
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      html:null
+     };
+  }
 
-
-
-export default function App() {
-  const [html, sethtml] = useState()
-    handleClick()
-
-    handleClick() {
-      console.log('Click happened');
+  componentDidMount(){
+        fetch("https://data.fis-ski.com/fis_events/ajax/raceresultsfunctions/details.html?sectorcode=AL&raceid=104374")
+        .then(
+          (result) => {
+            this.setState({
+              html: result,
+            });
+            console.log(result)
+          },
+          (error) => {
+            this.setState({
+              isLoaded: true,
+              error
+            });
+          }
+        )
     }
 
-  return (
-    <>
-      asdasdas
-    </>
-  );
+  render() {
+    return (
+      <>
+
+      </>
+    );
+  }
 }
 
+export default App;
