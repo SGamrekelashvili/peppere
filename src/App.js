@@ -5,7 +5,12 @@ function App() {
 
 
   useEffect(() => {
-    fetch('/time/2').then(res => res.json()).then(data => {
+    fetch('/time/2',{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }).then(res => res.json()).then(data => {
       console.log(data)
       const b = data.time.split("[")
       const c = b[1].split("]")
