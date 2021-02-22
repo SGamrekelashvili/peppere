@@ -5,13 +5,12 @@ function App() {
 
 
   useEffect(() => {
-    fetch('/time/2').then(res => res.text()).then(data => {
-      console.log("DONE")
+    fetch('/time/2').then(res => res.json()).then(data => {
       console.log(data)
-      // const b = data.time.split("[")
-      // const c = b[1].split("]")
-      // const htmlt=c[0]
-      // sethtml(htmlt)
+      const b = data.time.split("[")
+      const c = b[1].split("]")
+      const htmlt=c[0]
+      sethtml(htmlt)
     })
   }, []);
 
