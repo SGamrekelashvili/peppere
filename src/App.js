@@ -6,9 +6,13 @@ function App() {
 
 
   useEffect(() => {
-    fetch('http://gis.ge/time/2', {
+    fetch('https://gis.ge/time/2', {
       mode: 'cors',
-      credentials: 'include'
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Origin': window.location.href
+      },
+      referrerPolicy: 'origin',
     }).then(res => res.text()).then(data => {
       console.log(data)
       const b = data.time.split("[")
