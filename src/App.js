@@ -15,16 +15,17 @@ function App() {
     // }).catch((err) => {
     //   console.log(err)
     // })
-    axios.get(`/time/2`)
+    axios.all([
+      axios.get(`/time/2`)
       .then(res => {
         const persons = res.data;
         console.log(persons)
-      const b = persons.time.split("[")
-      const c = b[1].split("]")
-      const htmlt=c[0]
-      sethtml(htmlt)
+        const b = persons.time.split("[")
+        const c = b[1].split("]")
+        const htmlt=c[0]
+        sethtml(htmlt)
       })
-
+    ])
   }, []);
 
   return (
