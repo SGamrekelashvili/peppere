@@ -6,7 +6,10 @@ function App() {
 
 
   useEffect(() => {
-    fetch('http://gis.ge/time/2').then(res => res.text()).then(data => {
+    fetch('http://gis.ge/time/2', {
+      mode: 'cors',
+      credentials: 'include'
+    }).then(res => res.text()).then(data => {
       console.log(data)
       const b = data.time.split("[")
       const c = b[1].split("]")
