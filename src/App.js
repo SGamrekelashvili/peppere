@@ -1,37 +1,22 @@
-import React,{Component} from "react"
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { 
-      html:null
-     };
-  }
+import React,{useState,useEffect} from "react"
+import ReactDOM from 'react-dom';
 
-  componentDidMount(){
-        fetch("https://data.fis-ski.com/fis_events/ajax/raceresultsfunctions/details.html?sectorcode=AL&raceid=104374")
-        .then(
-          (result) => {
-            this.setState({
-              html: result,
-            });
-            console.log(result)
-          },
-          (error) => {
-            this.setState({
-              isLoaded: true,
-              error
-            });
-          }
-        )
-    }
+function App() {
+  const [html, sethtml] = useState()
 
-  render() {
-    return (
-      <>
 
-      </>
-    );
-  }
+  useEffect(() => {
+    fetch('/time/2').then(res => res.json()).then(data => {
+      const b = data.time.split("[")
+      const c = b[1].split("]")
+      const htmlt=c[0]
+      sethtml(htmlt)
+    });
+  }, []);
+
+  return (
+    <div dangerouslySetInnerHTML={{__html: html}} />
+  );
 }
 
 export default App;
