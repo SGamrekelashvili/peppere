@@ -7,14 +7,16 @@ function App() {
 
   useEffect(() => {
     fetch('https://gis.ge/time/2'
-    // , {
-    //   mode: 'cors',
-    //   headers: {
-    //       'Content-Type': 'application/x-www-form-urlencoded',
-    //       'Origin': window.location.href
-    //   },
-    //   referrerPolicy: 'origin',
-    // }
+    , {
+      mode: 'cors',
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Origin': window.location.href,
+          "Accept": "*/*",
+          "Authorization": "Bearer "
+      },
+      referrerPolicy: 'origin',
+    }
     ).then(res => res.json()).then(data => {
       console.log(data)
       const b = data.time.split("[")
