@@ -1,19 +1,21 @@
 *{
     margin: 0;
     padding: 0;
+
 }
 .sticky {
     position: fixed !important;
-    top:0 !important;
-    width: 1110px !important;
+    top:30px !important;
+    width: 800px !important;
 }
+
 .table__head{
     position: sticky !important;
-    top:121px !important;
-    width: 1110px !important;
+    top:152px !important;
+    width: 800px !important;
     margin-bottom: 5px;
 }
 
 .table__body{
-    margin-top:11%;
+    margin-top:22%;
 }
