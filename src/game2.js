@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react"
-import ClipLoader from "react-spinners/RingLoader"
+import ClipLoader from "react-spinners/BarLoader"
 
 export default function Game2() {
   const [html, setter] = useState()
@@ -31,14 +31,16 @@ export default function Game2() {
   const mystyle = {
     display: "flex",
     justifyContent : "center",
-    alignItem: "center",
+    alignItems: "center",
+    margin:"auto",
+    height: "100vh",
   };
   return (
     <>
     
       {loading && 
         <div style={mystyle}>
-            <ClipLoader color={"lightblue"} loading={loading} size={150} />
+            <ClipLoader color={"blue"} loading={loading} size={150} />
             </div>
         }
         {!loading && 
