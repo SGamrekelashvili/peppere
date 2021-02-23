@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from "react"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Game1 from './game1'
-import Game2 from './Game2'
-import Game3 from './Game3'
+import Game2 from './game2'
+import Game3 from './game3'
 
 
 function App() {

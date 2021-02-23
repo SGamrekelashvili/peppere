@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react"
 
 function Game1() {
-  const [html, sethtml] = useState()
+  const [html, setter] = useState()
 
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function Game1() {
       const b = data.time.split("[")
       const c = b[1].split("]")
       const htmlt=c[0]
-      sethtml(htmlt)
+      setter(htmlt)
     })
 
   }, []);
