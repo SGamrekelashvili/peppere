@@ -5,7 +5,7 @@ function Game1() {
 
 
   useEffect(() => {
-    fetch('https://gis.ge/time/104440'
+    fetch('https://gis.ge/time/13234'
     , {
       mode: 'cors',
       headers: {
@@ -28,8 +28,9 @@ function Game1() {
 
   return (
     <>
+
     <div dangerouslySetInnerHTML={{__html: html}} />
-  </>
+        </>
   );
 }
 

@@ -1,20 +1,29 @@
 import React,{useState,useEffect} from "react"
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Game1 from './game1'
-import Game2 from './game2'
-import Game3 from './game3'
+import Game2 from './Game2'
+import Game3 from './Game3'
+
 
 function App() {
-
   return (
-    <main>
+ <Router>
+    <div className="App">
     <Switch>
-        <Route path="/" component={<h1>Hello</h1>} exact />
-        <Route path="/game1" component={Game1} />
-        <Route path="/game2" component={Game2} />
-        <Route path="/game3" component={Game3} />
+        <Route path='/game1'>
+            <Game1 />
+        </Route>
+        <Route path='/game2'>
+            <Game2 />
+        </Route>
+        <Route path='/game3'>
+            <Game3 />
+        </Route>
+        <Route path='/'>
+        </Route>  
     </Switch>
-    </main>
+    </div>
+    </Router>
   );
 }
 
