@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from "react"
-
+import ClipLoader from "react-spinners/RingLoader";
 function Game1() {
   const [html, setter] = useState()
+  const [loading, setLoading] = useState(true);
 
 
   useEffect(() => {
@@ -22,14 +23,25 @@ function Game1() {
       const c = b[1].split("]")
       const htmlt=c[0]
       setter(htmlt)
+      setLoading(false)
     })
 
   }, []);
-
+  const mystyle = {
+    display: "flex",
+    justifyContent : "center",
+    alignItem: "center",
+  };
   return (
     <>
-
-    <div dangerouslySetInnerHTML={{__html: html}} />
+      {loading && 
+        <div style={mystyle}>
+            <ClipLoader color={"lightblue"} loading={loading} size={150} />
+            </div>
+        }
+        {!loading && 
+            <div dangerouslySetInnerHTML={{__html: html}} />
+            }
         </>
   );
 }
