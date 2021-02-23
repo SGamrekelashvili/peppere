@@ -5,8 +5,8 @@
 }
 .sticky {
     position: fixed !important;
-    top:15px !important;
-    width: 800px !important;
+    top:0px !important;
+    width: 900px !important;
 }
 
 .table__head{
