@@ -12,10 +12,10 @@
 .table__head{
     position: sticky !important;
     top:152px !important;
-    width: 800px !important;
+    width: 900px !important;
     margin-bottom: 5px;
 }
 
 .table__body{
-    margin-top:22%;
+    margin-top:11%;
 }
