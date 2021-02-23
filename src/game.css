@@ -6,12 +6,12 @@
 .sticky {
     position: fixed !important;
     top:0px !important;
-    width: 900px !important;
+    width: 910px !important;
 }
 
 .table__head{
     position: sticky !important;
-    top:119px !important;
+    top:116px !important;
     width: 900px !important;
     margin-bottom: 5px;
 }
