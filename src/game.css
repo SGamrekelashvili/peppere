@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sticky {
+    position: fixed !important;
+    top:0 !important;
+    width: 1110px !important;
+}
+.table__head{
+    position: sticky !important;
+    top:121px !important;
+    width: 1110px !important;
+    margin-bottom: 5px;
+}
+
+.table__body{
+    margin-top:11%;
+}

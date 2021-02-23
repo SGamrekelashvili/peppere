@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react"
 import ClipLoader from "react-spinners/BarLoader"
+import "./game.css"
 
 export default function Game2() {
   const [html, setter] = useState()
