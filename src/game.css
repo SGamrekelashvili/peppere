@@ -6,16 +6,29 @@
 .sticky {
     position: fixed !important;
     top:0px !important;
-    width: 910px !important;
+    width: 100% !important;
 }
 
 .table__head{
     position: sticky !important;
     top:116px !important;
-    width: 900px !important;
+    width: 100% !important;
     margin-bottom: 5px;
 }
 
 .table__body{
-    margin-top:11%;
+    margin-top:12.5%;
 }
+
+@media (min-width: 1170px){
+    .athlete-profile__inner, .content__container, .events-banner__inner, .footer__inner, .header__inner, .nav_wide .nav__inner, .navbar__inner, .page__inner, .section__inner, .stat-charts__inner {
+        padding-left: 0rem  !important; 
+        padding-right: 0rem !important;
+    }
+    .section__inner{
+        max-width: 100% !important;
+    }
+}
+
+
+
